@@ -4,7 +4,7 @@
 _Despite the many TODOs you see in this README, the plugin is fully functional._
 ## Folding based on search terms
 * [ ] TODO: Add a gif here demonstrating the power of "SearchTerms"
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://github.com/wnim/UVM-Log-Focus/blob/main/UVM-log-Focus-Demo.gif)
 * [ ] TODO: Add a table the outlines the different key combinations and what they do
 ```
 <Leader>l
