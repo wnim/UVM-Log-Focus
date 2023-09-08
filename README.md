@@ -5,7 +5,8 @@ _Despite the many TODOs you see in this README (and in code), the plugin is func
 ## Folding based on search terms
 ### Gif demo
 ![Alt Text](https://github.com/wnim/UVM-Log-Focus/blob/main/UVM-log-Focus-Demo.gif)
-* [ ] TODO: Add a table the outlines the different key combinations and what they do
+* [ ] TODO: Add a video demo with all registers in action.
+* [ ] TODO: Add a table the outlines the different key combinations and what they do.
 ```
 <Leader>l
 <Leader>k
