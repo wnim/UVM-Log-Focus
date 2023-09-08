@@ -111,9 +111,9 @@ augroup LOG
   noremap <Leader>s :sort f /) @/<CR>
   
   "get rid of directory hirarchy in the log file and just keep the filename
-  command RmPrePath %s/platforms\/[\.a-zA-Z_\/0-9\-]\+\/
+  command RmPrePath %s/\/[\.a-zA-Z_\/0-9\-]\+\/
   noremap <Leader>rp :RmPrePath<CR>
-  
+
   "Get rid of the hierarchy part of the uvm log
   command RmFullHier %s/ uvm_test_top[_@.a-z0-9]\+/
   command RmHier %s/\.[a-z_.1-9]\+\./\.\./
