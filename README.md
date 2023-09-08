@@ -8,25 +8,18 @@ _Despite the many TODOs you see in this README (and in code), the plugin is func
 
 ![Alt Text](https://github.com/wnim/UVM-Log-Focus/blob/main/UVM-log-Focus-Longer-Demo.gif)
 
-* [ ] TODO: Add a video demo with all registers in action.
-* [ ] TODO: Add a table the outlines the different key combinations and what they do.
-```
-<Leader>l
-<Leader>k
-<Leader>j
-<Leader>z
-```
+| \<Leader>l | Add search term to register l |
+|-----------|-------------------------------|
+| \<Leader>k | Add search term to register k |
+| \<Leader>j | Add search term to register j |
+| \<Leader>z | Apply folds                   |
 
 ## Removing uninteresting parts of the UVM log prints
-* [ ] TODO: Add a table the outlines the different key combinations and what they do
 
-```
-<Leader>rp
-<Leader>rh
-<Leader>rfh
-```
-
-* [ ] TODO: Decide if `<Leader>s` is even worth mentioning because I don't use it that much myself.
+| \<Leader>rp  | Remove file path (keep file name)      |
+|--------------|----------------------------------------|
+| \<Leader>rh  | Remove hierarchy (keep last component) |
+| \<Leader>rfh | Remove full hierarchy.                 |
 
 ## Installation
 1. Download log.vim
