@@ -1,7 +1,7 @@
 # UVM-Log-Focus
 > UVM-Log-Focus comes with a variety of functions that will help you ignore the inherent noise of UVM log files.
 > 
-_Despite the many TODOs you see in this README, the plugin is fully functional._
+_Despite the many TODOs you see in this README (and in code), the plugin is functional._
 ## Folding based on search terms
 ### Gif demo
 ![Alt Text](https://github.com/wnim/UVM-Log-Focus/blob/main/UVM-log-Focus-Demo.gif)
