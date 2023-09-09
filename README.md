@@ -14,6 +14,17 @@ _Despite the many TODOs you see in this README (and in code), the plugin is func
 | \<Leader>j | Add search term to register j |
 | \<Leader>z | Apply folds                   |
 
+_It helps to know the basics of vim folds to use effectively. You will sometimes want to manually open and close the folds_
+
+https://vimdoc.sourceforge.net/htmldoc/fold.html
+
+#### A useful subset:
+- `{Visual}zf`	Operator to create a fold.
+- `zo` Open one fold under the cursor.
+- `zc` Close one fold under the cursor.
+- `zR` Open all folds.  This sets 'foldlevel' to highest fold level.
+- `zd` Delete one fold at the cursor.
+
 ## Removing uninteresting parts of the UVM log prints
 
 | \<Leader>rp  | Remove file path (keep file name)      |
