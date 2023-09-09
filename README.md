@@ -1,6 +1,3 @@
-# UVM-Log-Focus
-> UVM-Log-Focus comes with a variety of functions that will help you ignore the inherent noise of UVM log files.
-> 
 
 `log.vim` offers multiple functions that allow you to hide anything that isn't helpful to you during debug.
 You can remove file paths and object/component hierarchies that make the message unnecessarily long.
