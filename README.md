@@ -1,7 +1,13 @@
 # UVM-Log-Focus
 > UVM-Log-Focus comes with a variety of functions that will help you ignore the inherent noise of UVM log files.
 > 
-_Despite the many TODOs you see in this README (and in code), the plugin is functional._
+
+`log.vim` offers multiple functions that allow you to hide anything that isn't helpful to you during debug.
+You can remove file paths and object/component hierarchies that make the message unnecessarily long.
+You can decide exactly which lines to see and which to hide based on multiple search terms.
+Think of it as in-vim `grep <search-term1> -e <search-term2> ... <log> | grep -v <search-term3> -e <search-term4> ...` but faster and much more dynamic.
+
+
 ## Folding based on search terms
 ### Gif demo
 ![Alt Text](https://github.com/wnim/UVM-Log-Focus/blob/main/UVM-log-Focus-Demo.gif)
