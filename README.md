@@ -11,8 +11,9 @@ Think of it as in-vim `grep <search-term1> -e <search-term2> ... <log> | grep -v
 
 ![Alt Text](https://github.com/wnim/UVM-Log-Focus/blob/main/UVM-log-Focus-Longer-Demo.gif)
 
+| Shortcut     | Action                      |
+|-----------|--------------------------------|
 | \<Leader>l | Add search term to register l |
-|-----------|-------------------------------|
 | \<Leader>k | Add search term to register k |
 | \<Leader>j | Add search term to register j |
 | \<Leader>z | Apply folds                   |
@@ -30,8 +31,9 @@ https://vimdoc.sourceforge.net/htmldoc/fold.html
 
 ## Removing uninteresting parts of the UVM log prints
 
-| \<Leader>rp  | Remove file path (keep file name)      |
+| Shortcut     | Action                                 |
 |--------------|----------------------------------------|
+| \<Leader>rp  | Remove file path (keep file name)      |
 | \<Leader>rh  | Remove hierarchy (keep last component) |
 | \<Leader>rfh | Remove full hierarchy.                 |
 
