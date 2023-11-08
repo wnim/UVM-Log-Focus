@@ -60,6 +60,9 @@ function SetFoldexprWin()
   " https://www.reddit.com/r/vim/comments/17lf0ln/unwanted_behavior_in_my_first_vim_plugin/
   " No one helped :(
   "commands below are two difference options that I tried and failed
+  " https://www.reddit.com/r/vim/comments/17lf0ln/unwanted_behavior_in_my_first_vim_plugin/
+  " I got no help here
+  " Maybe I can learn from NERDtree how to do it.
   "wincmd w
   "execute("normal \<C-w>j")
   call RefreshFoldexprWin() 
