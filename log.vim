@@ -127,6 +127,8 @@ augroup LOG
   command RmHier %s/\.[a-z_.1-9]\+\./\.\./
   noremap <Leader>rh :RmHier<CR>
   noremap <Leader>rfh :RmFullHier<CR>
+
+  "TODO Add "RmID" command
 augroup END
 
 
