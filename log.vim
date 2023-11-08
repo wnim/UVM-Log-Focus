@@ -13,6 +13,8 @@
 "zo
 "zc
 "
+
+"TODO: I want to display the number of visible lines: https://stackoverflow.com/questions/19058016/how-do-i-count-the-number-of-displayed-lines-in-vim
 function ChangeWindowContentWithSearchTerms()
   "This doesn't work well if the user opened more horizontal splits because the  'execute' commands assume a certain configuration of windows
   "Will have to see if I can give my status window some special name or number and make a command that know to switch to it and back
@@ -28,6 +30,7 @@ function ChangeWindowContentWithSearchTerms()
     put! = K 
     put! = J 
     "Removes any empty lines that may have been left after the previous operations
+    " 'g' commands are showing some weird output when I just open the log, I should use :h silent on both of them
     g/^$/d 
     "Move (m) all lines starting with ^ (which matches every line) to position 0
     g/^/m0 
@@ -54,6 +57,8 @@ function SetFoldexprWin()
   let @k="" 
   let @j="" 
   "TODO figure out how to return the focus to the main window
+  " https://www.reddit.com/r/vim/comments/17lf0ln/unwanted_behavior_in_my_first_vim_plugin/
+  " No one helped :(
   "commands below are two difference options that I tried and failed
   "wincmd w
   "execute("normal \<C-w>j")
