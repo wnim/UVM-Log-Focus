@@ -6,9 +6,9 @@ Think of it as in-vim `grep <search-term1> -e <search-term2> ... <log> | grep -v
 
 
 ## Folding based on search terms
-### Gif demo
+### Gif demo [Click to view in full screen]
 ![Alt Text](https://github.com/wnim/UVM-Log-Focus/blob/main/UVM-log-Focus-Demo.gif)
-### Another Gif demo
+### Another Gif demo [Click to view in full screen]
 ![Alt Text](https://github.com/wnim/UVM-Log-Focus/blob/main/UVM-log-Focus-Longer-Demo.gif)
 
 | Shortcut     | Action                      |
