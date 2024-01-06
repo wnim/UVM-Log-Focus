@@ -13,27 +13,42 @@
 "zo
 "zc
 "
+fu! CalcVisibleLines()
+let result=0
+let i=0
 
-"TODO: I want to display the number of visible lines: https://stackoverflow.com/questions/19058016/how-do-i-count-the-number-of-displayed-lines-in-vim
+while (i <= line('$'))
+if foldclosed(i) > 0
+    let i = foldclosedend(i)+1
+    continue
+    endif
+    let i+=1
+    let result += 1
+endw
+let @n = result-1
+endfu
+
 function ChangeWindowContentWithSearchTerms()
   "This doesn't work well if the user opened more horizontal splits because the  'execute' commands assume a certain configuration of windows
   "Will have to see if I can give my status window some special name or number and make a command that know to switch to it and back
-   if bufname("%") == "SearchTerms"  
+  if bufname("%") == "SearchTerms"  
     "delete all lines in buffer
     1,$d 
     "Put the text into variables
     let K = execute("echo '@k: Hiding matches to     : '@k") 
     let L = execute("echo '@l: Hiding non-matches to : '@l") 
     let J = execute("echo '@j: Showing non-matches to: '@j")
+    let N = execute("echo '@n: Num of displayed lines: '@n")
     "Print variable content onto buffer
-    put! = L 
-    put! = K 
-    put! = J 
+    put! = L
+    put! = K
+    put! = J
+    put! = N
     "Removes any empty lines that may have been left after the previous operations
     " 'g' commands are showing some weird output when I just open the log, I should use :h silent on both of them
-    g/^$/d 
+    silent! g/^$/d 
     "Move (m) all lines starting with ^ (which matches every line) to position 0
-    g/^/m0 
+    silent! g/^/m0 
     "Make the windows size 2 times the number of lines.
     "TODO need to find a way to resize to num of lines including wraps
     "Right now just doubling so the size is always 3*2=6 lines
@@ -53,15 +68,14 @@ function SetFoldexprWin()
   "TODO decide if nowrap is better or not
   "set nowrap
   set wrap
-  let @l="" 
-  let @k="" 
-  let @j="" 
+  let @l=""
+  let @k=""
+  let @j=""
+  let @n=""
   "TODO figure out how to return the focus to the main window
   " https://www.reddit.com/r/vim/comments/17lf0ln/unwanted_behavior_in_my_first_vim_plugin/
   " No one helped :(
   "commands below are two difference options that I tried and failed
-  " https://www.reddit.com/r/vim/comments/17lf0ln/unwanted_behavior_in_my_first_vim_plugin/
-  " I got no help here
   " Maybe I can learn from NERDtree how to do it.
   "wincmd w
   "execute("normal \<C-w>j")
@@ -93,8 +107,11 @@ augroup LOG
   "If I want to search the whole log, I will zr to unfold it and then search
   set foldopen-=search
   
-  nnoremap <Leader>z :setlocal foldexpr=DecideWhatToFold(getline(v:lnum)) foldmethod=expr foldlevel=0 foldcolumn=2 foldminlines=0 \| call RefreshFoldexprWin()<CR>
-  
+  "nnoremap <Leader>z :setlocal foldexpr=DecideWhatToFold(getline(v:lnum)) foldmethod=expr foldlevel=0 foldcolumn=2 foldminlines=0 \| call RefreshFoldexprWin()<CR>
+  nnoremap <Leader>z :setlocal foldexpr=DecideWhatToFold(getline(v:lnum)) foldmethod=expr foldlevel=0 foldcolumn=2 foldminlines=0 \| call CalcVisibleLines() \| call RefreshFoldexprWin()<CR><CR>
+
+
+
   "map <Leader>cX to clear register X and refresh the search keys window
   "map <Leader>X to add the string in @/ to X (with 'or' operator)
   for i in ['j', 'k', 'l']
